@@ -1,0 +1,756 @@
+/*清除全部样式*/
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+    margin: 0;
+    padding: 0;
+}
+
+*{box-sizing: border-box;}
+html, body {
+    min-height: 100%;
+}
+
+body {
+    font-family: "Microsoft YaHei";
+}
+
+h1, h2, h3, h4, h5, h6{font-weight:normal;}
+ul,ol {
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+}
+
+input, textarea {
+    background:none;
+    outline: none;
+    border: none;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: ".";
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+    overflow:hidden;
+}
+
+/*左浮动*/
+.fl {
+    float: left
+}
+
+/*右浮动*/
+.fr {
+    float: right
+}
+
+/*清除浮动*/
+.cf{
+    clear: both;
+}
+
+/*左对齐*/
+.tl {
+    text-align: left;
+}
+
+/*居中*/
+.tc {
+    text-align: center
+}
+
+/*右对齐*/
+.tr {
+    text-align: right;
+}
+
+/*管理员登录页开始*/
+.AdminLoginBody {
+    /*背景图设置*/
+    background: url("../image/admin/login.jpg") no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+.AdminLoginLogo {
+    /*Logo*/
+    background: url("../image/logo.png") no-repeat;
+    width: 246px;
+    height: 82px;
+    margin: 20px;
+}
+/*淡入动画开始*/
+@keyframes fade-in {
+    0% {opacity: 0;}/*初始状态 透明度为0*/
+    40% {opacity: 0;}/*过渡状态 透明度为0*/
+    100% {opacity: 1;}/*结束状态 透明度为1*/
+}
+@-webkit-keyframes fade-in {/*针对webkit内核*/
+    0% {opacity: 0;}
+    40% {opacity: 0;}
+    100% {opacity: 1;}
+}
+/*淡入动画结束*/
+.AdminLoginBg {
+    /*登录框背景*/
+    padding: 20px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 20px;
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    animation: fade-in;/*动画名称*/
+    animation-duration: 1.5s;/*动画持续时间*/
+    -webkit-animation:fade-in 1.5s;/*针对webkit内核*/
+    text-align: center;
+}
+.AdminLoginTitle{
+    /*登录框标题*/
+    text-align: center;
+    color: #ffffff;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.AdminLoginLine {
+    /*分割线*/
+    width: 200px;
+    height: 2px;
+    border-radius: 1px;
+    margin: 20px auto;
+    background: #ffffff;
+}
+.AdminLoginEditBg {
+    /*文本输入框背景*/
+    width: auto;
+    display: inline-block;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    margin: auto;
+    padding: 10px;
+}
+.AdminLoginEditBg input {
+    /*输入框样式*/
+    font-size: 20px;
+    color: #ffffff;
+    vertical-align: middle;
+}
+.AdminLoginEditBg img {
+    /*图片样式*/
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.AdminLoginButton {
+    /*登录按钮*/
+    background: url('../image/icon/登录默认.png') no-repeat;
+    background-size: 60px 60px;
+    border: 0;
+    outline: none;
+    width: 60px;
+    height: 60px;
+    margin: 20px auto;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+}
+.AdminLoginButton:hover {
+    /*登录按钮选中状态*/
+    background: url('../image/icon/登录选中.png') no-repeat;
+    background-size: 60px 60px;
+}
+/*管理员登录页结束*/
+
+/*管理页顶部导航栏开始*/
+.AdminNavBar {
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*设置文本不可选中*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/*管理页标签对齐方式*/
+.AdminNavBar li {
+    float: left;
+}
+/*管理页便签与超链接样式*/
+.AdminNavBar li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.AdminNavBar img {
+    height: 50px;
+    vert-align: middle;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+/*管理页便签悬浮预览样式*/
+.AdminNavBar li a:hover {
+    color: #ffffff;
+}
+/*管理页顶部导航栏结束*/
+
+/*管理页样式开始*/
+.AdminBg{
+    /*管理页背景样式*/
+    background-image: url("../image/outlets.png");
+}
+/*管理页样式结束*/
+
+/*岗位管理开始*/
+.AdminPostsLay {
+    /*岗位管理布局*/
+    overflow: hidden;
+    height: 100%;
+    padding-top: 90px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: none;
+}
+.AdminPostsLeftLay {
+    /*左侧导航栏*/
+    list-style-type: none;
+    height: 100%;
+    background: transparent;
+    text-align:center;
+    padding: 20px;
+    float: left;
+    /*设置文本不可选中*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.AdminPostsLeftLay li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.AdminPostsRightLay {
+    /*右侧管理主页*/
+    overflow: auto;
+    height: 100%;
+}
+.AdminPostsRightJobLay {
+    /*右侧岗位信息管理布局*/
+    color: #ffffff;
+    margin: 20px;
+    display: none;
+}
+.AdminPostsRightJobLay table{
+    background-color: #ffffff;
+}
+.AdminPostsRightJobAdd {
+    /*新增岗位按钮样式*/
+    color: #f39800;
+    margin-bottom: 20px;
+}
+.AdminPostsRightJobAdd:hover {
+    color: #f39800;
+}
+.AdminPostsRightJobDialogBtn {
+    /*控制对话框按钮隐藏*/
+    display: none;
+}
+.AdminPostsRightJobDialogNote {
+    /*岗位管理标签样式*/
+    white-space: nowrap;
+    float: left;
+    background-color: #f39800;
+    padding: 5px;
+    border-radius: 3px;
+    color: #fff;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    /*设置文本不可选中*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.AdminPostsRightJobDialogNoteBtn {
+    /*岗位管理添加标签按钮样式*/
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+/*岗位管理结束*/
+
+/*管理员查看用户简历*/
+.AdminPostsRightSendUserResume {
+    text-align: center;
+}
+.AdminPostsRightSendUserResume img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.AdminPostsRightSendUserResumeInfo {
+    text-align: left;
+    margin-top: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.AdminPostsRightSendUserResumeInfo h4 {
+    float: left;
+    margin-right: 20px;
+}
+.AdminPostsRightSendUserResumeName {
+    margin-top: 30px;
+    margin-right: 20px;
+    color: #f39800;
+}
+.AdminPostsRightSendUserResumeItem {
+    margin-top: 20px;
+    text-align: left;
+}
+.AdminPostsRightSendUserResumeItem h3 {
+    color: #f39800;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.AdminPostsRightSendUserResumeItemDetail {
+    text-align: left;
+    margin-top: 10px;
+}
+/*管理员查看用户简历*/
+.AdminLayAdminContent {
+    overflow: auto;
+    height: 100%;
+    font-size: 20px;
+    padding: 20px;
+    color: #fff;
+    display: none;
+}
+.AdminLayAdminContent table {
+    background-color: #fff;
+}
+
+/*自定义滚动条开始*/
+/*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+    width: 10px; /*对垂直流动条有效*/
+    height: 10px; /*对水平流动条有效*/
+}
+/*定义滚动条的轨道颜色、内阴影及圆角*/
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #bdc3c7;
+    border-radius: 7px;
+}
+/*定义滑块颜色、内阴影及圆角*/
+::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #f39800;
+}
+/*定义两端按钮的样式*/
+::-webkit-scrollbar-button {
+    display: none;
+}
+/*定义右下角汇合处的样式*/
+::-webkit-scrollbar-corner {
+    display: none;
+}
+/*自定义滚动条结束*/
+
+/*用户登录页开始*/
+.UserLoginBody {
+    /*背景图设置*/
+    background: url("../image/admin/login.jpg") no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+.UserLoginLogo {
+    /*Logo*/
+    background: url("../image/logo.png") no-repeat;
+    width: 246px;
+    height: 82px;
+    margin: 20px;
+}
+.UserLoginBg {
+    /*登录框背景*/
+    padding: 20px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 20px;
+    width: 600px;
+    height: 350px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    animation: fade-in;/*动画名称*/
+    animation-duration: 1.5s;/*动画持续时间*/
+    -webkit-animation:fade-in 1.5s;/*针对webkit内核*/
+    text-align: center;
+}
+.UserLoginTitle{
+    /*登录框标题*/
+    text-align: center;
+    color: #ffffff;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.UserLoginLine {
+    /*分割线*/
+    width: 200px;
+    height: 2px;
+    border-radius: 1px;
+    margin: 20px auto;
+    background: #ffffff;
+}
+.UserLoginEditBg {
+    /*文本输入框背景*/
+    width: auto;
+    display: inline-block;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    margin: auto;
+    padding: 10px;
+}
+.UserLoginEditBg input {
+    /*输入框样式*/
+    font-size: 20px;
+    color: #ffffff;
+    vertical-align: middle;
+}
+.UserLoginEditBg img {
+    /*图片样式*/
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.UserSignUpLabel {
+    color: #ffffff;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 15px;
+}
+.UserSignUpLabel:hover {
+    font-size: 20px;
+}
+.UserLoginButton {
+    /*登录按钮*/
+    background: url('../image/icon/登录默认.png') no-repeat;
+    background-size: 60px 60px;
+    border: 0;
+    outline: none;
+    width: 60px;
+    height: 60px;
+    margin: 20px auto;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+}
+.UserLoginButton:hover {
+    /*登录按钮选中状态*/
+    background: url('../image/icon/登录选中.png') no-repeat;
+    background-size: 60px 60px;
+}
+.UserSignUpBg {
+    display: none;
+}
+.UserSignUpButton {
+    /*注册按钮*/
+    background: url('../image/icon/登录默认.png') no-repeat;
+    background-size: 60px 60px;
+    border: 0;
+    outline: none;
+    width: 60px;
+    height: 60px;
+    margin: 20px auto;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+}
+.UserSignUpButton:hover {
+    /*注册按钮选中状态*/
+    background: url('../image/icon/注册.png') no-repeat;
+    background-size: 60px 60px;
+}
+/*用户登录页结束*/
+
+/*用户页顶部导航栏开始*/
+.UserNavBar {
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*设置文本不可选中*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.UserNavBar li {
+    float: left;
+}
+.UserNavBar li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.UserNavBar img {
+    height: 50px;
+    vert-align: middle;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+.UserNavBar li a:hover {
+    color: #f39800;
+}
+/*用户页顶部导航栏结束*/
+
+/*用户页开始*/
+.UserBg {
+    background-image: url("../image/outlets.png");
+}
+/*用户页结束*/
+
+/*用户简历开始*/
+.UserResumeLay {
+    overflow: hidden;
+    height: 100%;
+    padding-top: 90px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: none;
+}
+.UserNoResumeLay {
+    /*无简历*/
+    text-align: center;
+    vert-align: middle;
+    /*设置文本不可选中*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: none;
+}
+.UserNoResumeLay h1 {
+    /*提示语*/
+    color: #fff;
+}
+.UserNoResumeLay button {
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #f39800;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.UserNoResumeLay button:hover {
+    background-color: #f38000;
+}
+.UserNoResumeLay button:focus {
+    outline: none;
+    border: none;
+}
+.UserCreateResumeLay {
+    /*创建*/
+    overflow: auto;
+    height: 100%;
+    color: #f39800;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    /*设置文本不可选中*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #fff;
+    border-radius: 10px;
+    display: none;
+}
+.UserCreateResumeLay h1,h2,h3 {
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.UserCreateResumeLay h3 {
+    margin-top: 30px;
+}
+.UserCreateResumeImg {
+}
+.UserCreateResumeImg img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.UserCreateResumeImg input {
+    display: none;
+}
+.UserCreateResumeBtn {
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #f39800;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.UserCreateResumeBtn:hover {
+    background-color: #f38000;
+}
+.UserCreateResumeBtn:focus {
+    outline: none;
+    border: none;
+}
+.UserCreateResumeItem {
+    margin-top: 10px;
+    text-align: left;
+    color: #000;
+}
+.UserHasResumeLay {
+    overflow: auto;
+    height: 100%;
+    color: #f39800;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    /*设置文本不可选中*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #fff;
+    border-radius: 10px;
+    display: none;
+}
+.UserHasResumeLay h1,h2,h3 {
+    font-weight: bold;
+}
+.UserHasResumeLay h3 {
+    color: #000;
+}
+.UserHasResumeInfo{
+    text-align: left;
+    margin: 50px;
+}
+.UserHasResumeInfo img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 50px;
+}
+.UserHasResumeInfoFl {
+    float: left;
+    margin-right: 20px;
+    vertical-align: bottom;
+}
+.UserHasResumeDetail {
+    text-align: left;
+    margin: 50px;
+}
+.UserHasResumeDetailMain {
+    float: left;
+}
+.UserHasResumeDetailItem {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #000;
+}
+/*用户简历结束*/
+
+/*用户找工作开始*/
+.UserJobLay {
+    overflow: hidden;
+    height: 100%;
+    padding-top: 90px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: none;
+}
+.UserJobLayContent {
+    overflow: auto;
+    height: 100%;
+    font-size: 20px;
+    padding: 20px;
+    color: #fff;
+}
+.UserJobLayContent table {
+    background-color: #ffffff;
+}
+.UserJobLayTableBtn {
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #f39800;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 15px;
+}
+.UserJobLayTableBtn:hover {
+    background-color: #f38000;
+}
+.UserJobLayTableBtn:focus {
+    outline: none;
+    border: none;
+}
+.UserJobLayTableNoWrap {
+    /*强制部分文本不换号*/
+    white-space: nowrap;
+}
+/*用户找工作结束*/
